@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tester.controllers.TestsResultsViewController">
+   <children>
+      <VBox layoutX="101.0" layoutY="98.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" onMouseDragged="#DragWindow" onMousePressed="#onMousePressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button id="extBtn" fx:id="extBtn" mnemonicParsing="false" onMouseClicked="#ExitProgramm" prefHeight="40.0" prefWidth="70.0" text="X">
+                     <font>
+                        <Font name="Corbel" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="475.0">
+                     <children>
+                        <Button id="backBtn" fx:id="backBtn" mnemonicParsing="false" onMouseClicked="#BackToTests" style="-fx-background-color: transparent; -fx-text-fill: #21334c;" text="&lt; К списку тестов">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Verdana" size="16.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane prefHeight="2.0" prefWidth="200.0" style="-fx-background-color: #21334c;" />
+                        <Label style="-fx-text-fill: #21334c;" text="Сессии прохождения теста">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label id="testNameLabel" fx:id="testNameLabel" style="-fx-text-fill: #21334c;" text="Label">
+                           <font>
+                              <Font name="Verdana" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+            <TableView id="rsultTableView" fx:id="rsultTableView" prefHeight="759.0" prefWidth="600.0">
+              <columns>
+                <TableColumn id="nameCol" fx:id="nameCol" prefWidth="293.0" text="ФИО" />
+                <TableColumn id="groupCol" fx:id="groupCol" prefWidth="205.0" text="Группа" />
+                  <TableColumn id="scoreCol" fx:id="scoreCol" prefWidth="203.0" text="Балл" />
+                  <TableColumn id="gradeCol" fx:id="gradeCol" prefWidth="198.0" text="Оценка" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

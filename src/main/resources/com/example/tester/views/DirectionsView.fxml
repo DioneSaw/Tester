@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tester.controllers.DirectionViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="64.0" prefHeight="273.0" prefWidth="572.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" onMouseDragged="#DragWindow" onMousePressed="#onMousePressed" prefHeight="40.0" prefWidth="800.0">
+               <children>
+                  <Button id="exitBtn" fx:id="exitBtn" mnemonicParsing="false" onMouseClicked="#ExitProgramm" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: ffffff; -fx-text-fill: #21334c;" text="X">
+                     <font>
+                        <Font name="Corbel" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="10.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="475.0">
+                     <children>
+                        <Label style="-fx-text-fill: #21334c;" text="Выберете ваше направление ">
+                           <font>
+                              <Font name="Verdana" size="23.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <AnchorPane prefHeight="2.0" prefWidth="5.0" style="-fx-background-color: #21334c;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox id="directionsVbox" fx:id="directionsVbox" alignment="CENTER" prefHeight="302.0" prefWidth="570.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" />
+               </VBox.margin>
+            </VBox>
+         </children></VBox>
+   </children>
+</AnchorPane>
